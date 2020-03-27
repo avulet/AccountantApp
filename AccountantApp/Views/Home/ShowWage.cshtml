@@ -1,0 +1,26 @@
+﻿@model AccountatApp.Domain.Entities.Worker
+
+@{
+    ViewData["Title"] = "ShowWage";
+}
+
+<h1>Show Wage</h1>
+
+<div>
+    <h4>Worker</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Wage)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Wage)
+        </dd>
+    </dl>
+</div>

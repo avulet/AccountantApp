@@ -1,0 +1,55 @@
+﻿@model AccountatApp.Domain.Entities.Project
+
+@{
+    ViewData["Title"] = "AddWorkingHours";
+}
+
+<h1>Add Working Hours</h1>
+
+<h4>Project</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="AddWorkingHours">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+            <div class="form-group">
+                <label asp-for="Worker.Name" class="control-label"></label>
+                <input asp-for="Worker.Name" class="form-control" />
+                <span asp-validation-for="Worker.Name" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ProjectName" class="control-label"></label>
+                <input asp-for="ProjectName" class="form-control" />
+                <span asp-validation-for="ProjectName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="HourlyWage" class="control-label"></label>
+                <input asp-for="HourlyWage" class="form-control" />
+                <span asp-validation-for="HourlyWage" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="WorkingHoursNormal" class="control-label"></label>
+                <input asp-for="WorkingHoursNormal" class="form-control" />
+                <span asp-validation-for="WorkingHoursNormal" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="WorkingHoursOvertime" class="control-label"></label>
+                <input asp-for="WorkingHoursOvertime" class="form-control" />
+                <span asp-validation-for="WorkingHoursOvertime" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="WorkingHoursNight" class="control-label"></label>
+                <input asp-for="WorkingHoursNight" class="form-control" />
+                <span asp-validation-for="WorkingHoursNight" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Calculate" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
